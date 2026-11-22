@@ -1,6 +1,7 @@
 // Tiny stack VM for make.fun's tiny-stack-vm-01 ISA v1.
 // For each /input/<id>/{program.bin,input.bin} write /output/<id>/stdout.bin
 // and /output/<id>/exit.txt. All values are wrapping signed 32-bit integers.
+// Traps end the run with their own exit code (2-11) and keep prior output.
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
